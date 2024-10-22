@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzadinha - Paradigma lógico</title>
+    <link rel="icon" type="image/png" href="image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <style>
+        .pulo {
+            width: 60px;
+            height: auto;
+            margin-right: 15px;
+            animation: jump 5s infinite;
+            position: relative;
+        }
+
+        @keyframes jump {
+            0% {
+                top: 0;
+            }
+            30% {
+                top: -20px;
+            }
+            50% {
+                top: 0;
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        h1 {
+            color: #d86c00;
+            font-size: 3rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="parabensDiv" style="display: none; text-align: center;">
+        <h2>Parabéns! Você completou a cruzadinha!</h2>
+    </div>
+
+    <script>
+        function exibirParabens() {
+            document.getElementById('parabensDiv').style.display = 'block';
+
+            var duration = 5 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    </script>
+
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <img src="prolog.png" alt="Ícone Prolog" class="pulo">
+        <h1>Cruzadinha - Paradigma lógico <i class="fas fa-code"></i></h1>
+    </div>
+</body>
+
+</html>
+    
+    <div class="container">
+        
+        <div class="crossword">
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+             <!-- RESPOSTA 1 -->
+            <div class="cell hint">1</div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="M"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div> <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            
+             <!-- RESPOSTA 5 -->
+            <div class="cell hint">5</div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="P"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="R"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="O"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="L"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="O"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="G"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>            
+
+            <div class="cell"><input type="text" maxlength="1" data-answer="S"></div>
+
+           <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            
+            <!-- RESPOSTA 2 -->
+            <div class="cell hint">2</div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="T"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="L"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="V"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="E"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="Z"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            
+            <div class="cell"><input type="text" maxlength="1" data-answer="L"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="H"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+             
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+             <!-- RESPOSTA 6 -->
+            <div class="cell hint">6</div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+
+            <div class="cell"><input type="text" maxlength="1" data-answer="C"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+        
+             <!-- RESPOSTA 3 -->
+            <div class="cell hint">3</div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="U"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="N"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="I"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="F"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="I"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="C"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="Ç"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="Ã"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="O"></div>
+            
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty">
+
+            </div><div class="cell"><input type="text" maxlength="1" data-answer="L"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="M"></div>
+
+             <!-- RESPOSTA 4 -->
+            <div class="cell hint">4</div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="F"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="T"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="O"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="S"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="E"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell"><input type="text" maxlength="1" data-answer="R"></div>
+
+            <!-- RESPOSTA 7 -->
+            <div class="cell hint">7</div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="C"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="O"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="N"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="S"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="U"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="L"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="T"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="S"></div>
+
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="A"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="U"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="E"></div>
+            <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+            <div class="cell"><input type="text" maxlength="1" data-answer="R"></div>
+            <div class="cell empty"></div>
+
+        </div>
+        <div class="hints" style="font-size: 2.5rem; color: #ff9900;">
+            <h2 style="font-size: 2rem;">Dicas <i class="fas fa-question-circle"></i></h2>
+            
+            <p style="font-size: 1.5rem;">1. Qual universidade francesa foi fundamental no desenvolvimento do Prolog? (8 letras)</p>
+            <p style="font-size: 1.5rem;">2. Qual é o predicado em Prolog que nunca tem certeza de nada? (6 letras)</p>
+            <p style="font-size: 1.5rem;">3. Qual é o nome da operação usada pelo sistema lógico para verificar se uma consulta é verdadeira? (10 letras)</p>
+            <p style="font-size: 1.5rem;">4. Qual é o elemento que define "verdades" no paradigma lógico? (5 letras)</p>
+            <p style="font-size: 1.5rem;">5. Qual é a linguagem de programação mais associada ao paradigma lógico? (6 letras)</p>
+            <p style="font-size: 1.5rem;">6. Quem liderou a equipe que desenvolveu o Prolog? (10 letras)</p>
+            <p style="font-size: 1.5rem;">7. O paradigma lógico se baseia em fatos, regras e ...? (9 letras)</p>
+
+        </div>
+        </div>
+        
+        <button onclick="checkAnswers()">Verificar Respostas</button>
+        <script src="script.js"></script>
+        </body>
+        </html>
+        
